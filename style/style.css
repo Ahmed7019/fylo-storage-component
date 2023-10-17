@@ -24,21 +24,29 @@
   --border-r: 0.4rem;
   --pa: 0.625rem;
   --ma: 0 0.625rem;
+  --box-pa: 1rem;
+  --box--ma: 1rem;
 }
 
 body {
   display: grid;
   min-height: 100vh;
   place-items: center;
+  font-family: var(--ff-raleway);
 }
 
 /* utilities */
 
+.box {
+  width: fit-content;
+  padding: var(--box-pa);
+  margin: var(--box-ma);
+}
 .icon-box {
   width: 1rem;
   height: 1rem;
-  padding: --pa;
-  margin: --ma;
+  padding: var(--pa);
+  margin: var(--ma);
 }
 
 .-gradient {
