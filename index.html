@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <div class="container -flex-row">
-        <div class="-bg-neutral-dark -flex-col">
+    <div class="container -flex-col">
+        <div class="-bg-neutral-dark -flex-col l-box border-r border-tr">
             <img src="images/logo.svg" alt="logo">
             <div class="-flex-row">
                 <div class="icon-box -bg-neutral-extra-dark"><img src="images/icon-document.svg" alt="document"></div>
@@ -18,9 +18,9 @@
                 <div class="icon-box -bg-neutral-extra-dark"><img src="images/icon-upload.svg" alt="icon-upload"></div>
             </div>
         </div>
-        <div>
-            <label for="storage">You've used <span>815 GB</span> fo your storage</label>
-            <input type="range" name="storage" id="storage" min="0GB" value="90%" max="1000GB">
+        <div class="-bg-neutral-dark -flex-col s-box border-r fs-s ta-left">
+            <label for="storage" class="clr-light-white w-100">You've used <span class="fw-bold clr-white">815 GB</span> fo your storage</label>
+            <input type="range" name="storage" id="storage" min="0" value="815" max="1000" class="gradient ma-10" readonly>
         </div>
     </div>
 </body>
