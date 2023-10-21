@@ -22,6 +22,7 @@
   --bg-neutral-extra-dark: hsl(229, 57%, 11%);
   --fs-body: 0.875rem;
   --fs-s: 0.875rem;
+  --fs-l: 1.57rem;
   --ff-raleway: "Raleway", sans-serif;
   --fw-regular: 400;
   --fw-bold: 700;
@@ -45,6 +46,14 @@ body {
   background-repeat: no-repeat;
 }
 
+
+
+
+/* Second box */
+
+.sec-box {
+  position: relative;
+}
 .progress-container {
   background: var(--bg-neutral-extra-dark);
   width: 100%;
@@ -82,7 +91,37 @@ body {
   right: 0;
 }
 
+.current-state {
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  bottom: 0;
+  background-color: white;
+  width: 12rem;
+  border-radius: var(--border-r);
+  height: fit-content;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  -webkit-border-radius: var(--border-r);
+  -moz-border-radius: var(--border-r);
+  -ms-border-radius: var(--border-r);
+  -o-border-radius: var(--border-r);
+}
 
+.current-state p {
+  font-size: var(--fs-l);
+  font-weight: var(--fw-bold);
+}
+
+.current-state span {
+  color: var(--clr-neutral-grayish);
+  text-transform: uppercase;
+}
 .progress {
   position: absolute;
   left: 0;
