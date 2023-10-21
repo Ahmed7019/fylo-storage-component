@@ -45,10 +45,10 @@ body {
   background-repeat: no-repeat;
 }
 
-.gradient {
-  background-color: var(--bg-neutral-extra-dark);
+.progress-container {
+  background: var(--bg-neutral-extra-dark);
   width: 100%;
-  height: 20px;
+  height: 15px;
   appearance: none;
   border-radius: 20px;
   -moz-border-radius: 20px;
@@ -57,10 +57,11 @@ body {
   -webkit-border-radius: 20px;
   margin: var(--ma);
   position: relative;
+  -moz-appearance: initial;
 }
 
-.gradient::before,
-.gradient::after {
+.progress-container::before,
+.progress-container::after {
   position: absolute;
   font-family: var(--ff-raleway);
   font-weight: var(--fw-bold);
@@ -71,85 +72,48 @@ body {
   -ms-transform: translateY(1.7rem);
   -o-transform: translateY(1.7rem);
 }
-.gradient::before {
-  content: attr(min) " GB";
+.progress-container::before {
+  content: "0 GB";
   left: 0;
 }
 
-.gradient::after {
-  content: attr(max) " GB";
+.progress-container::after {
+  content: attr(max) "1000 GB";
   right: 0;
 }
 
-.gradient::-webkit-slider-thumb {
-  -webkit-appearance: none;
+
+.progress {
+  position: absolute;
+  left: 0;
+  width: 80%;
+  height: 14px;
+  padding: 1px;
+  border-radius: inherit;
+  border: 1px solid var(--bg-neutral-extra-dark);
+  background-image: linear-gradient(to right , var(--clr-gradient-start), var(--clr-gradient-end));
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.thumb {
+  position: absolute;
+  right: 0;
+  filter: opacity(80%);
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  cursor: pointer;
-  position: relative;
   background-color: white;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-}
-.gradient::-moz-range-thumb {
-  -moz-appearance: none;
-  border: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: relative;
-  background-color: white;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  -webkit-filter: opacity(80%);
 }
 
-.gradient::-moz-progress-bar {
-  background-image: linear-gradient(
-    to right,
-    var(--clr-gradient-start),
-    var(--clr-gradient-end)
-  );
-}
-.gradient-webkit-range-progress {
-  background-image: -moz-linear-gradient(
-    to right,
-    var(--clr-gradient-start),
-    var(--clr-gradient-end)
-  );
-}
-/* .gradient::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  overflow: hidden;
-  border-radius: 20px;
-  margin: 4px;
-  padding: 2px;
-  background-image: -webkit-gradient(
-    to right,
-    var(--clr-gradient-start),
-    var(--clr-gradient-end)
-  );
 
-  background-image: -o-linear-gradient(
-    to right,
-    var(--clr-gradient-start),
-    var(--clr-gradient-end)
-  );
-  background-image: linear-gradient(
-    to right,
-    var(--clr-gradient-start),
-    var(--clr-gradient-end)
-  );
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-} */
 
 /* Utilities */
 
