@@ -8,7 +8,6 @@
 
 /* colors */
 :root {
-  --clr: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
   --clr-gradient-start: hsl(6, 100%, 80%);
   --clr-gradient-end: hsl(335, 100%, 65%);
   --clr-neutral-pale: hsl(243, 100%, 93%);
@@ -168,7 +167,7 @@ body {
 .thumb {
   position: absolute;
   right: 0;
-  filter: opacity(80%);
+  filter: opacity(70%);
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -177,20 +176,18 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  -webkit-filter: opacity(80%);
+  -webkit-filter: opacity(70%);
 }
+/* 
+  *-- Here ends the mobile design 
+*/
 
-/* Desktop design */
+/* 
+  *Desktop design below
 
-
-
-
-
-
-
-
-
-/* Utilities */
+*/
+/* *Utilities 
+*/
 
 .-bg-neutral-dark {
   background-color: var(--bg-neutral-dark);
@@ -270,7 +267,7 @@ body {
   margin-top: 2rem;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   body {
     background-image: url(../images/bg-desktop.png);
     background-position: bottom right;
@@ -283,13 +280,12 @@ body {
     justify-content: center;
     align-items: center;
   }
-.first-box,.sec-box {
-  margin-bottom: 0;
-}
+  .first-box,
+  .sec-box {
+    margin-bottom: 0;
+  }
   .sec-box {
     align-self: flex-end;
     width: 500px;
   }
-
-
 }
