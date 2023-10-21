@@ -180,6 +180,18 @@ body {
   -webkit-filter: opacity(80%);
 }
 
+/* Desktop design */
+
+@media screen and (min-width:1024px) {
+  
+}
+
+
+
+
+
+
+
 /* Utilities */
 
 .-bg-neutral-dark {
@@ -218,9 +230,9 @@ body {
 }
 
 .s-box {
-  width: 350px;
+  width: 300px;
   margin: var(--s-ma);
-  padding: var(--l-pa);
+  padding: var(--s-pa);
   padding-bottom: 5rem;
 }
 
@@ -229,7 +241,7 @@ body {
   justify-content: left;
 }
 .l-box {
-  width: 350px;
+  width: 300px;
   padding: var(--l-pa);
   margin: var(--l-ma);
 }
