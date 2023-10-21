@@ -288,4 +288,15 @@ body {
     align-self: flex-end;
     width: 500px;
   }
+
+  .current-state {
+    right: 0;
+    top: 0;
+    transform: translate(-12%, -25%);
+    -webkit-transform: translate(-12%, -25%);
+    -moz-transform: translate(-12%, -25%);
+    -ms-transform: translate(-12%, -25%);
+    -o-transform: translate(-12%, -25%);
+  }
+
 }
